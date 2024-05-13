@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Bulid directories
+build/*
+crow/

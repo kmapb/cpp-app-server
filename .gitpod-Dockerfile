@@ -1,0 +1,6 @@
+FROM gitpod/workspace-full:latest
+RUN apt install libgtk-3-dev
+RUN apt-get install build-essential libboost-all-dev
+RUN pip install meson
+
+
