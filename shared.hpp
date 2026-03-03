@@ -22,11 +22,11 @@ struct DynVal {
 };
 
 static inline DynVal
-parse_val(Type type, string sval) {
+parse_val(Type type, std::string sval) {
     switch (type) {
         case INT: {
             DynVal retval { INT, "", 0 };
-            retval.i = strtoll(sval.c_str(), sval.c_str() + sval.size(), 10);
+            retval.i = strtoll(sval.c_str(), nullptr, 10);
             return retval;
         };
         case STR: {
