@@ -6,11 +6,6 @@
 
 using namespace std;
 
-constexpr unordered_map<string, Type> kSchema = {
-  { "ts",  INT },
-  { "req", STR },
-};
-
 int main(int argc, char** argv) {
     printf("Hello, world!\n");
     string line;

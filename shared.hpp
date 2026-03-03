@@ -1,5 +1,7 @@
 #pragma once
 
+#include <inttypes.h>
+
 [[noreturn]] inline void unreachable() {
 #ifdef __GNUC__ // GCC and Clang
         __builtin_unreachable();
@@ -15,7 +17,7 @@ enum Type {
 
 struct DynVal {
     Type type;
-    string s;
+    std::string s;
     int64_t i;
 };
 
@@ -33,6 +35,6 @@ parse_val(Type type, string sval) {
             return retval;
         }
     }
-    not_reached
+    unreachable();
 }
 
