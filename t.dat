@@ -1,0 +1,4 @@
+ts=1 svc=A req=123 ev=send downstream=B
+ts=100 svc=B req=123 ev=recv 
+ts=200 svc=B req=123 ev=send downstream=C 
+ts=250 svc=C req=123 ev=recv
