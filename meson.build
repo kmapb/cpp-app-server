@@ -1,4 +1,4 @@
-project('skeleton', 'cpp', default_options: ['cpp_std=c++20'])
+project('skeleton', 'cpp', default_options: ['cpp_std=c++23'])
 
 if host_machine.system() == 'darwin'
   add_project_arguments(
@@ -9,5 +9,5 @@ if host_machine.system() == 'darwin'
 endif
 
 gtest_dep = dependency('gtest', fallback: ['gtest', 'gtest_dep'])
-executable('my_test', 'test.cpp', dependencies: gtest_dep)
-executable('skeleton', 'main.cpp')
+executable('my_test', ['test.cpp', 'shared.cpp'], dependencies: gtest_dep)
+executable('skeleton', ['main.cpp', 'shared.cpp'])

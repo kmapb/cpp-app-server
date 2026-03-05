@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <iostream>
+#include <format>
 
 #include "shared.hpp"
 
@@ -29,7 +30,7 @@ int main(int argc, char** argv) {
     printf("Hello, world!\n");
     string line;
     while (getline(cin, line)) {
-        cout << "you said: " << line << "\n";
+        dprintf("you said: {}\n", line);
         auto v = parse_line(kSchema, line);
     }
     return 0;
